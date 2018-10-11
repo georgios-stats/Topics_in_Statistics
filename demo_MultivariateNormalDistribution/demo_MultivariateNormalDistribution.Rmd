@@ -10,8 +10,7 @@ runtime: shiny
 
 <!-- This program is free software: you can redistribute it and/or modify -->
 <!-- it under the terms of the GNU General Public License as published by -->
-<!-- the Free Software Foundation, either version 3 of the License, or -->
-<!-- (at your option) any later version. -->
+<!-- the Free Software Foundation, either version 3 of the License -->
 
 <!-- This program is distributed in the hope that it will be useful, -->
 <!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
@@ -167,8 +166,8 @@ G_plot<- function(x1_sl=G_x1_sl_def,
     ylab = expression('x2'),
     zlab = "PDF",
     #main = "Gaussian",
-    phi = phi_def, 
-    theta = theta_def,
+    phi = phi, 
+    theta = theta,
     cex.lab=fntsz, cex.axis=fntsz, cex.main=fntsz, cex.sub=fntsz
   )
  
@@ -712,6 +711,7 @@ T_phi_def <- 45
 
 T_nu_def <- 1
 
+
 dbvt <-function (x, m, S, v) {
   
   d <-length( x )
@@ -732,6 +732,7 @@ dbvt <-function (x, m, S, v) {
   return(pdf)
 }
 
+
 T_PDF1 <- function(x,m,s,nu) {
   pdf <- dbvt(x,m,s^2,nu)
   #pdf <-dmvt( rep(x1, 1), delta = rep(0, 1), sigma = diag(1), df = 1)
@@ -746,47 +747,30 @@ T_PDF2 <- function(x,m,s,nu) {
 
 T_PDF12 <- function(x1,x2,m1,m2,s1,s2,r,nu) {
   mu <- m1+s1/s2*r*(x2-m2)
-  sig <- sqrt((1-r^2)*s1^2)
-  pdf <- dbvt(x1,mu,sig^2,1)
-  return (dnorm(x1, mean = mu, sd = sig, log = FALSE))
+  sig2 <- (1-r^2)*s1^2
+  sig2 <- (nu+ (x2-m2)^2/s2^2  )/(nu+1) *sig2
+  pdf <- dbvt(x1,mu,sig2,1)
+  return (pdf)
 }
 
 T_PDF21 <- function(x2,x1,m1,m2,s1,s2,r,nu) {
   mu <- m2+s2/s1*r*(x1-m1)
-  sig <- sqrt((1-r^2)*s2^2)
-  pdf <- dbvt(x2,mu,sig^2,1)
-  return (dnorm(x2, mean = mu, sd = sig, log = FALSE))
+  sig2 <- ((1-r^2)*s2^2)
+  sig2 <- (nu +(x1-m1)^2/s1^2  )/(nu+1)* sig2
+  pdf <- dbvt(x2,mu,sig2,1)
+  return (pdf)
 }
 
+
+
+
+
 T_PDF <- function(x1,x2,m1,m2,s1,s2,r,nu) {
-  
-  # x <- x1
-  # y <- x2
-  # mu1 <- m1
-  # mu2 <- m2
-  # sig1 <- s1
-  # sig2 <- s2
-  # rho <-r
-  # 
-  # term1 <- 1 / (2 * pi * sig1 * sig2 * sqrt(1 - rho^2))
-  # term2 <- (x - mu1)^2 / sig1^2
-  # term3 <- -(2 * rho * (x - mu1)*(y - mu2))/(sig1 * sig2)
-  # term4 <- (y - mu2)^2 / sig2^2
-  # z <- term2 + term3 + term4
-  # term5 <- term1 * exp((-z / (2 *(1 - rho^2))))
-  # return (term5)
-  
-  # pdf <-  dmvt(c(x1,x2), 
-  #             delta = c(m1,m2), 
-  #             sigma = matrix(c(s1*s1,r*s1*s2,r*s1*s2,s2*s2),nrow=2), 
-  #             df = nu, 
-  #             log = TRUE,
-  #             type = "shifted")
-  
+
   S <- matrix( c(s1*s1,r*s1*s2,r*s1*s2,s2*s2) , nrow=2)
   
   pdf <-  dbvt(c(x1,x2),c(m1,m2),S,nu)
-    #pdf <-dmvt( rep(x1, 1), delta = rep(0, 1), sigma = diag(1), df = 1)
+  #pdf <-dmvt( c(x1, x2), delta = c(m1,m2), sigma = S, df = nu)
   
     return( pdf )
 }
@@ -1205,7 +1189,7 @@ X_{1}|X_{2}=x_{2}\sim\text{t}_{d_{1}}(\mu_{1|2},\Sigma_{1|2},\nu_{1|2})
 \]
 with
 \begin{align*}
-\mu_{1|2}= & \mu_{1|2}=\mu_{1}-\Sigma_{21}\Sigma_{22}^{-1}(\mu_{2}-x_{2})\\
+\mu_{1|2}= & \mu_{1}-\Sigma_{21}\Sigma_{22}^{-1}(\mu_{2}-x_{2})\\
 \Sigma_{1|2}= & \frac{\nu+(\mu_{2}-x_{2})^{\text{T}}\Sigma_{22}^{-1}(\mu_{2}-x_{2})}{\nu+d_{2}}\Sigma_{11|2}\\
 \Sigma_{11|2}= & \Sigma_{11}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{21}^{\text{T}}\\
 \nu_{1|2}= & \nu+d_{2}
@@ -1216,7 +1200,7 @@ X_{2}|X_{1}=x_{1}\sim\text{t}_{d_{2}}(\mu_{2|1},\Sigma_{2|1},\nu_{2|1})
 \]
 with
 \begin{align*}
-\mu_{2|1}= & \mu_{2|1}=\mu_{2}-\Sigma_{21}\Sigma_{11}^{-1}(\mu_{1}-x_{1})\\
+\mu_{2|1}= & \mu_{2}-\Sigma_{21}\Sigma_{11}^{-1}(\mu_{1}-x_{1})\\
 \Sigma_{2|1}= & \frac{\nu+(\mu_{1}-x_{1})\Sigma_{11}^{-1}(\mu_{1}-x_{1})}{\nu+d_{1}}\Sigma_{22|1}\\
 \Sigma_{22|1}= & \Sigma_{22}-\Sigma_{21}^{\text{T}}\Sigma_{22}^{-1}\Sigma_{21}\\
 \nu_{1|2}= & \nu+d_{1}
