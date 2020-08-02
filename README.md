@@ -1,3 +1,3 @@
-# Topics_in_Statistics
+# Topics in Statistics
 
 
