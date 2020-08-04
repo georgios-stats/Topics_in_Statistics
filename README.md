@@ -83,9 +83,11 @@ Exercise sheet (without solutions)
 
 The computer practicals:
 
-- [Computer practical 1](http://htmlpreview.github.io/?https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Computer_Practicals/ComputerPractical_1.nb.html)  
+- [Computer practical 1 (without solutions)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Computer_Practicals/ComputerPractical_1.nb.html)  
 
-- [Computer practical 2](http://htmlpreview.github.io/?https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Computer_Practicals/ComputerPractical_2.nb.html)  
+- [Computer practical 2 (without solutions)](http://htmlpreview.github.io/?https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Computer_Practicals/ComputerPractical_2.nb.html)  
+
+To download the script *.Rmd click on the top right icon *Code* 
 
 ---  
 
