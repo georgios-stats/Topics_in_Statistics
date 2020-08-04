@@ -2,10 +2,10 @@
 title: 'Computer practical 1: Topics in Statistics III/IV, Term 1'
 author: "Georgios Karagiannis"
 output:
-  word_document: default
+  html_notebook: default
   pdf_document: default
   html_document: default
-  html_notebook: default
+  word_document: default
 ---
 
 > Aim
