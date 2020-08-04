@@ -35,7 +35,7 @@ This repository contains the teaching material for the module ***Topics in Stati
 
 ### Description
 
-The corse Topics in statistics (term 1 ; 2018) offers a superficial introduction to essential consepts/tools in contigency tables and  log-linear models, as well as a rigorus introduction to essential consepts in likelihood methods.  
+The corse Topics in statistics (term 1 ; 2018) offers a preliminary introduction to essential consepts/tools in contigency tables and  log-linear models, as well as a rigorus introduction to essential consepts in likelihood methods.  
 
 -   '[Description.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Description.pdf)' contains the ILOs, and sylabus
 
@@ -43,7 +43,7 @@ The corse Topics in statistics (term 1 ; 2018) offers a superficial introduction
 
 ### Contigency tables
 
-This is a superficial introduction to essential contigency table concepts
+This is a preliminary introduction to essential contigency table concepts
 
 Handout
 
@@ -57,7 +57,7 @@ Exercise sheet (without solutions)
 
 ### Log linear models
 
-This is a superficial to essential concepts in Log linear models
+This is a preliminary to essential concepts in Log linear models
 
 Handout
 
