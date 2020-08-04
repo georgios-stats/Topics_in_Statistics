@@ -33,11 +33,11 @@ This repository contains the teaching material for the module ***Topics in Stati
 
 ------------------------------------------------------------------------
 
-## Description
+### Description
 
 -   '[Description.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Description.pdf)' contains the ILOs, and sylabus
 
-## Lectures and Problem classes
+------------------------------------------------------------------------
 
 ### Contigency tables
 
@@ -49,6 +49,8 @@ Exercise sheet (without solutions)
 
 -   '[Exercises_ContigencyTables.blind.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Contigency_tables/Exercises_ContigencyTables.blind.pdf)'  
 
+------------------------------------------------------------------------
+
 ### Log linear models
 
 Handout
@@ -57,7 +59,9 @@ Handout
 
 Exercise sheet (without solutions)
 
-- '[Exercises_LogLinearModel.blind.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Log_Linear_Model/Exercises_LogLinearModel.blind.pdf)' 
+- '[Exercises_LogLinearModel.blind.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Log_Linear_Model/Exercises_LogLinearModel.blind.pdf)'  
+
+------------------------------------------------------------------------
 
 ### Likelihood methods (theory)
 
@@ -71,12 +75,117 @@ Exercise sheet (without solutions)
 
 - '[Exercises_LikelihoodMethodsForLargeSamples.blind.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Likelihood_Methods/Exercises_LikelihoodMethodsForLargeSamples.blind.pdf)' 
 
-## Computer practicals  
 
-- [Computer practical 1](http://htmlpreview.github.io/?https://github.com/georgios-stats/Bayesian_Statistics/blob/master/ComputerPracticals/Normal_Mixture_model/BayesianNormalMixtureModel.nb.html)  
+------------------------------------------------------------------------
 
-- [Computer practical 2](http://htmlpreview.github.io/?https://github.com/georgios-stats/Bayesian_Statistics/blob/master/ComputerPracticals/Normal_Mixture_model/BayesianNormalMixtureModel.nb.html)  
 
+### Computer practicals  
+
+The computer practicals:
+
+- [Computer practical 1](http://htmlpreview.github.io/?https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Computer_Practicals/ComputerPractical_1.nb.html)  
+
+- [Computer practical 2](http://htmlpreview.github.io/?https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Computer_Practicals/ComputerPractical_2.nb.html)  
+
+---  
+
+---  
+
+
+### How to download and use it in Rstudio cloud 
+
+1. Go to the website [ <https://rstudio.cloud> ] , if you already have an account log in, otherwise register and then log in.  
+
+2. After logging in,  
+    
+    1. go to Projects tab, 
+    
+    2. click on the *v* next to the *New Project* button to expand the pop-up menu list  
+    
+    3. click on the choice *New Project from Git Repo*  
+    
+    4. in the *URL of your Git repository* section insert the link: 
+        
+        <https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018.git> 
+
+    ... this will gonna download the whole Bayesian learning teaching material. You can navigate to the material.  
+
+### How to download the whole repository
+
+Ways:
+
+1. You can click [[HERE](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/archive/master.zip)].
+
+2. You can click the green button 'Clone or download' and download it as a zip file
+
+3. You can use the program 'git' (<https://git-scm.com/>):
+    
+    -   in windows/linux: 
+    
+        download and install git from https://git-scm.com/
+    
+    -   in Debian linux run in the terminal: 
+    
+        sudo apt-get install git
+    
+    -   in Red Hat linux run in the terminal: 
+    
+        sudo yum install git
+    
+    ... then run:
+
+    -   git clone https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018.git
+
+4. You can use rstudio:
+
+    1.  Go to File &gt; New Project &gt; Version Control &gt; Git
+    
+    2.  In the section *Repository URL* write
+        
+        -   <https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018.git>
+        
+        -   … and complete the rest as you wish
+    
+    3.  Hit *Create a Project*
+
+### How to download a specific folder only
+
+Ways:
+
+1. You can use the GitZip add-on for Firefox available [HERE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjACegQIAhAB&url=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fgitzip%2F&usg=AOvVaw37servrJ29tuNcx9dIQDqy) or the Chrome add-on GitZip available [HERE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjABegQIARAB&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgitzip-for-github%2Fffabmkklhbepgcgfonabamgnfafbdlkn%3Fhl%3Den&usg=AOvVaw1Pn3VXuXz1Fphl7dsPEhDS)
+
+    1. In install [Firefox GitZip add-on](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjACegQIAhAB&url=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fgitzip%2F&usg=AOvVaw37servrJ29tuNcx9dIQDqy) or the [Chrome GitZip add-on](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjABegQIARAB&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgitzip-for-github%2Fffabmkklhbepgcgfonabamgnfafbdlkn%3Fhl%3Den&usg=AOvVaw1Pn3VXuXz1Fphl7dsPEhDS)  
+
+    2. Double click on the items you need.  
+    
+    3. Click download button at bottom-right.  
+    
+    4. See the progress dashboard and wait for browser trigger download.  
+    
+    5. Get the ZIP file.  
+
+2. You can use 'git' (<https://git-scm.com/>). 
+
+    E.g., assume you wish to download the sub-folder 'Computer_Practicals':
+
+    -   run in the terminal the following:
+        
+        *mkdir Topics_in_Statistics_Michaelmas_2018  
+        cd Topics_in_Statistics_Michaelmas_2018  
+        git init  
+        git remote add -f origin https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018.git  
+        git config core.sparseCheckout true  
+        echo "Computer_Practicals/*" >> .git/info/sparse-checkout  
+        git pull origin master*
+
+### How to download a specific file
+
+1. You can just navigate to the file from the browser and download it.
+
+2. You can use the GitZip add-on for Firefox available [HERE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjACegQIAhAB&url=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2Faddon%2Fgitzip%2F&usg=AOvVaw37servrJ29tuNcx9dIQDqy) or the Chrome add-on GitZip available [HERE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwias52xjd3nAhXPUs0KHeXHCEUQFjABegQIARAB&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgitzip-for-github%2Fffabmkklhbepgcgfonabamgnfafbdlkn%3Fhl%3Den&usg=AOvVaw1Pn3VXuXz1Fphl7dsPEhDS)
+
+
+------------------------------------------------------------------------
 
 
 
