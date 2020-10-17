@@ -51,7 +51,7 @@ Handout
 
 Exercise sheet (without solutions)
 
--   '[Exercises_ContigencyTables.blind.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Contigency_tables/Exercises_ContigencyTables.blind.pdf)'  
+-   '[Exercises_ContigencyTables.blind.pdf](https://github.com/georgios-stats/Topics_in_Statistics_Michaelmas_2018/blob/master/Contigency_tables/Exercises_ContigencyTables.blind.pdf)'
 
 ------------------------------------------------------------------------
 
